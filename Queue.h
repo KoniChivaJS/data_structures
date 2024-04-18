@@ -20,7 +20,19 @@ public:
     void Enqueue(T data);
     T Dequeue();
     T Peek();
+    bool isEmpty();
+    bool isFull();
 };
+
+template<typename T>
+bool Queue<T>::isFull() {
+    return (tail == size - 1 && head == 0) || (tail == head - 1);
+}
+
+template<typename T>
+bool Queue<T>::isEmpty() {
+    return head == -1;
+}
 
 template<typename T>
 T Queue<T>::Peek() {
@@ -54,7 +66,7 @@ T Queue<T>::Dequeue() {
 
 template<typename T>
 void Queue<T>::Enqueue(T data) {
-    if(head == 0 && tail == size-1){
+    if((tail == size - 1 && head == 0) || (tail == head - 1)){
         cout<<"Queue is full"<<endl;
         return;
     }

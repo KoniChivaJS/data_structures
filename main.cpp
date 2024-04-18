@@ -2,12 +2,11 @@
 #include "Queue.h"
 using namespace std;
 int main() {
-    Queue<int> Queue(2);
+    Queue<int> Queue(1);
+    cout<<Queue.isEmpty()<<endl;
+    cout<<"IS FULL: "<<Queue.isFull()<<endl;
     Queue.Enqueue(3);
-    Queue.Enqueue(1);
-    Queue.Enqueue(1);
-    cout<<Queue.Peek()<<endl;
-    Queue.Dequeue();
-    Queue.Dequeue();
+    cout<<Queue.isEmpty()<<endl;
+    cout<<"IS FULL: "<<Queue.isFull()<<endl;
     return 0;
 }
