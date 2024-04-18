@@ -32,6 +32,7 @@ T Queue<T>::Peek() {
     return arr[head];
 }
 
+
 template<typename T>
 T Queue<T>::Dequeue() {
     if(head == -1){
@@ -49,6 +50,7 @@ T Queue<T>::Dequeue() {
     }
     return data;
 }
+
 
 template<typename T>
 void Queue<T>::Enqueue(T data) {
